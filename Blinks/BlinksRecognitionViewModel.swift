@@ -14,13 +14,15 @@ protocol BlinksRecognitionViewModelingInputs {
     func btnRecognizePressed()
     func userBlinked(eye: Eye)
     func set(delegate: BlinksRecognitionDelegation)
+    func clearBlinksService()
 }
 
 protocol BlinksRecognitionViewModelingOutputs {
     var title: String { get }
+    func rectColor(forEye eye: Eye) -> UIColor 
 }
 
-protocol BlinksRecognitionViewModeling {
+protocol BlinksRecognitionViewModeling: class {
     var inputs: BlinksRecognitionViewModelingInputs { get }
     var outputs: BlinksRecognitionViewModelingOutputs { get }
 }
@@ -53,8 +55,14 @@ class BlinksRecognitionViewModel: BlinksRecognitionViewModeling, BlinksRecogniti
     
     func userBlinked(eye: Eye) {
         blinksService.userBlinked(eye: eye)
-        let newColor = color(forBlinkNumber: blinksService.blinksNumber(eye: eye))
-        delegate?.changeRectangle(forEye: eye, color: newColor)
+    }
+    
+    func clearBlinksService() {
+        blinksService.clearBlinks()
+    }
+    
+    func rectColor(forEye eye: Eye) -> UIColor {
+        return color(forBlinkNumber: blinksService.blinksNumber(eye: eye))
     }
     
     func set(delegate: BlinksRecognitionDelegation) {

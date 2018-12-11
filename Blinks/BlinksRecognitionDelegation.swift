@@ -14,7 +14,6 @@ import UIKit
 // Here I will do it with delegate
 
 protocol BlinksRecognitionDelegation: class {
-    func changeRectangle(forEye: Eye, color: UIColor)
     func startCameraTracking()
     func btnRecognizeVisibility(shouldShow: Bool)
     func showAlert(message: String)

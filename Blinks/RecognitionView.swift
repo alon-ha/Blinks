@@ -11,7 +11,7 @@ import UIKit
 import ARKit
 
 // I know that in order to present only 2d on the screen, I could have used ARSKView
-// I chose to use ARSCNView to support also 3d if in the future we would like to do such
+// I chose to use ARSCNView to support also 3d if in the future we would like to do so
 
 class RecognitionView: ARSCNView {
     private lazy var configuration: ARFaceTrackingConfiguration = {

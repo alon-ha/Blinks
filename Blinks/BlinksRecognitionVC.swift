@@ -24,7 +24,7 @@ class BlinksRecognitionVC: UIViewController {
     fileprivate lazy var recognitionView: RecognitionView = {
         let recognitionView = RecognitionView()
         recognitionView.delegate = contentUpdaterService
-        contentUpdaterService.set(device: recognitionView.device!)
+        recognitionView.session.delegate = contentUpdaterService
         return recognitionView
     }()
     
@@ -53,6 +53,7 @@ class BlinksRecognitionVC: UIViewController {
          contentUpdaterService: ContentUpdaterServicing = ContentUpdaterService()) {
         self.viewModel = viewModel
         self.contentUpdaterService = contentUpdaterService
+        self.contentUpdaterService.set(viewModel: self.viewModel)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -95,11 +96,7 @@ fileprivate extension BlinksRecognitionVC {
     }
 }
 
-extension BlinksRecognitionVC: BlinksRecognitionDelegation {
-    func changeRectangle(forEye eye: Eye, color: UIColor) {
-        
-    }
-    
+extension BlinksRecognitionVC: BlinksRecognitionDelegation {    
     func startCameraTracking() {
         recognitionView.isHidden = false
         recognitionView.start()
