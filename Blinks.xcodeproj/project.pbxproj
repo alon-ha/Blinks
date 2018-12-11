@@ -19,7 +19,7 @@
 		DF53CFDD21BFE5A900C2DC08 /* BlinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFDC21BFE5A900C2DC08 /* BlinksService.swift */; };
 		DF53CFDF21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFDE21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift */; };
 		DF53CFE321BFEABD00C2DC08 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFE221BFEABD00C2DC08 /* RectangleView.swift */; };
-		DF53CFE521BFEB5200C2DC08 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFE421BFEB5200C2DC08 /* CameraView.swift */; };
+		DF53CFE521BFEB5200C2DC08 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFE421BFEB5200C2DC08 /* RecognitionView.swift */; };
 		DF53CFE721BFEC2200C2DC08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF53CFE621BFEC2200C2DC08 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		DF53CFDC21BFE5A900C2DC08 /* BlinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksService.swift; sourceTree = "<group>"; };
 		DF53CFDE21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksRecognitionViewModel.swift; sourceTree = "<group>"; };
 		DF53CFE221BFEABD00C2DC08 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
-		DF53CFE421BFEB5200C2DC08 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		DF53CFE421BFEB5200C2DC08 /* RecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
 		DF53CFE621BFEC2200C2DC08 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +138,7 @@
 			children = (
 				DF53CFAE21BFE35D00C2DC08 /* BlinksRecognitionVC.swift */,
 				DF53CFE221BFEABD00C2DC08 /* RectangleView.swift */,
-				DF53CFE421BFEB5200C2DC08 /* CameraView.swift */,
+				DF53CFE421BFEB5200C2DC08 /* RecognitionView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 				DF53CFAD21BFE35D00C2DC08 /* AppDelegate.swift in Sources */,
 				DF53CFDD21BFE5A900C2DC08 /* BlinksService.swift in Sources */,
 				DF53CFBF21BFE35D00C2DC08 /* FontBook.swift in Sources */,
-				DF53CFE521BFEB5200C2DC08 /* CameraView.swift in Sources */,
+				DF53CFE521BFEB5200C2DC08 /* RecognitionView.swift in Sources */,
 				DF53CFDF21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift in Sources */,
 				DF53CFC121BFE35D00C2DC08 /* EasyViews.swift in Sources */,
 				DF53CFE321BFEABD00C2DC08 /* RectangleView.swift in Sources */,

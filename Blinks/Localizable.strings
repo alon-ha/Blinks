@@ -8,3 +8,6 @@
 
 Blinks = "Blinks";
 btnRecognizeTitle = "Recognize Me!";
+allowCameraAlert = "You must allow camere permissions,\nplease go to the settings app to do so.";
+Ok = "Ok";
+deviceNotSupportFaceTracking = "Your device does not support face tracking, sorry :(";
