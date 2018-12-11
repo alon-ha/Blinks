@@ -19,7 +19,6 @@
 		DF53CFDD21BFE5A900C2DC08 /* BlinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFDC21BFE5A900C2DC08 /* BlinksService.swift */; };
 		DF53CFDF21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFDE21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift */; };
 		DF53CFE721BFEC2200C2DC08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF53CFE621BFEC2200C2DC08 /* Localizable.strings */; };
-		DF53D00E21C016CE00C2DC08 /* FaceContentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D00D21C016CE00C2DC08 /* FaceContentProtocol.swift */; };
 		DF53D01021C01CAE00C2DC08 /* ContentUpdaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D00F21C01CAE00C2DC08 /* ContentUpdaterService.swift */; };
 		DF53D01221C01D4700C2DC08 /* BlinksRecognitionDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01121C01D4700C2DC08 /* BlinksRecognitionDelegation.swift */; };
 		DF53D01421C0377D00C2DC08 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01321C0377D00C2DC08 /* RecognitionView.swift */; };
@@ -43,7 +42,6 @@
 		DF53CFDC21BFE5A900C2DC08 /* BlinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksService.swift; sourceTree = "<group>"; };
 		DF53CFDE21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksRecognitionViewModel.swift; sourceTree = "<group>"; };
 		DF53CFE621BFEC2200C2DC08 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		DF53D00D21C016CE00C2DC08 /* FaceContentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceContentProtocol.swift; sourceTree = "<group>"; };
 		DF53D00F21C01CAE00C2DC08 /* ContentUpdaterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUpdaterService.swift; sourceTree = "<group>"; };
 		DF53D01121C01D4700C2DC08 /* BlinksRecognitionDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksRecognitionDelegation.swift; sourceTree = "<group>"; };
 		DF53D01321C0377D00C2DC08 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 		DF53D00C21C0169E00C2DC08 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				DF53D00D21C016CE00C2DC08 /* FaceContentProtocol.swift */,
 				DF53D01121C01D4700C2DC08 /* BlinksRecognitionDelegation.swift */,
 			);
 			name = Protocols;
@@ -317,7 +314,6 @@
 				DF53CFDD21BFE5A900C2DC08 /* BlinksService.swift in Sources */,
 				DF53CFBF21BFE35D00C2DC08 /* FontBook.swift in Sources */,
 				DF53D01021C01CAE00C2DC08 /* ContentUpdaterService.swift in Sources */,
-				DF53D00E21C016CE00C2DC08 /* FaceContentProtocol.swift in Sources */,
 				DF53CFDF21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift in Sources */,
 				DF53CFC121BFE35D00C2DC08 /* EasyViews.swift in Sources */,
 				DF53D01221C01D4700C2DC08 /* BlinksRecognitionDelegation.swift in Sources */,

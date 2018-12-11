@@ -25,10 +25,15 @@ class ContentUpdaterService: NSObject, ContentUpdaterServicing {
         static let recHeight: CGFloat = 0.01
         static let recWidth: CGFloat = 0.03
         static let recDefaultColor: UIColor = ColorPalette.basicGrey
+        static let minimumValueToDetectBlink: Float = 0.6
+        static let epsilon: Float = 0.01
     }
     
     weak var delegate: BlinksRecognitionDelegation?
     weak var viewModel: BlinksRecognitionViewModeling?
+    
+    var isCurrentlyDetectingBlinkingInRightEye = false
+    var isCurrentlyDetectingBlinkingInLeftEye = false
     
     fileprivate lazy var rightEyeNode: SCNNode = {
         let geometry = SCNPlane(width: Metrics.recWidth,
@@ -95,6 +100,9 @@ extension ContentUpdaterService {
         
         rightEyeNode.simdTransform = faceAnchor.rightEyeTransform
         leftEyeNode.simdTransform = faceAnchor.leftEyeTransform
+        
+        let blendShapes = faceAnchor.blendShapes
+        analyzeBlinks(blendShapes: blendShapes)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
@@ -113,5 +121,33 @@ extension ContentUpdaterService {
         }
         
         delegate?.showAlert(message: message)
+    }
+}
+
+fileprivate extension ContentUpdaterService {
+    func analyzeBlinks(blendShapes: [ARFaceAnchor.BlendShapeLocation : NSNumber]) {
+        if let eyeBlinkLeft = blendShapes[.eyeBlinkLeft] as? Float {
+            if !isCurrentlyDetectingBlinkingInLeftEye && eyeBlinkLeft > Metrics.minimumValueToDetectBlink {
+                isCurrentlyDetectingBlinkingInLeftEye = true
+                blink(eye: .leftEye)
+            } else if isCurrentlyDetectingBlinkingInLeftEye && eyeBlinkLeft < Metrics.epsilon {
+                isCurrentlyDetectingBlinkingInLeftEye = false
+            }
+        }
+        
+        if let rightBlinkLeft = blendShapes[.eyeBlinkRight] as? Float {
+            if !isCurrentlyDetectingBlinkingInRightEye && rightBlinkLeft > Metrics.minimumValueToDetectBlink {
+                isCurrentlyDetectingBlinkingInRightEye = true
+                blink(eye: .rightEye)
+            } else if isCurrentlyDetectingBlinkingInRightEye && rightBlinkLeft < Metrics.epsilon {
+                isCurrentlyDetectingBlinkingInRightEye = false
+            }
+        }
+    }
+    
+    func blink(eye: Eye) {
+        viewModel?.inputs.userBlinked(eye: eye)
+        let color = viewModel?.outputs.rectColor(forEye: eye) ?? Metrics.recDefaultColor
+        changeRectangle(forEye: eye, color: color)
     }
 }

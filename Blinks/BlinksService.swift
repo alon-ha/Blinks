@@ -15,6 +15,10 @@ protocol BlinksServicing {
 }
 
 class BlinksService: BlinksServicing {
+    private struct Metrics {
+        static let maxBlinks: Int = 6
+    }
+    
     // I could also implementing init function and init the array there
     // Chosed to do it as literal
     private var blinksArray = [0, 0]
@@ -27,6 +31,7 @@ class BlinksService: BlinksServicing {
     }
     
     func userBlinked(eye: Eye){
+        guard blinksArray[eye.index] < Metrics.maxBlinks else { return }
         blinksArray[eye.index] += 1
     }
     

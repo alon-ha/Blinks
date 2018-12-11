@@ -10,7 +10,7 @@ import UIKit
 
 public struct ColorPalette {
     public static var blue = UIColor(r: 0, g: 161, b: 229)
-    public static var black = UIColor(r: 51, g: 51, b: 51)
+    public static var black = UIColor(r: 50, g: 40, b: 40)
     public static var darkGrey = UIColor(r: 128, g: 128, b: 128)
     public static var basicGrey = UIColor(r: 196, g: 196, b: 196)
     public static var midGrey = UIColor(r: 225, g: 225, b: 225)
