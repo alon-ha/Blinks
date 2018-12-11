@@ -7,38 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8AAF29EECE2F18E5734D3B1 /* Pods_Blinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CBE47CC49F77570E3240A2 /* Pods_Blinks.framework */; };
 		DF53CFAD21BFE35D00C2DC08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFAC21BFE35D00C2DC08 /* AppDelegate.swift */; };
 		DF53CFAF21BFE35D00C2DC08 /* BlinksRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFAE21BFE35D00C2DC08 /* BlinksRecognitionVC.swift */; };
-		DF53CFB221BFE35D00C2DC08 /* DLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFB121BFE35D00C2DC08 /* DLog.swift */; };
-		DF53CFB521BFE35D00C2DC08 /* Reusable+IndentifierName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFB421BFE35D00C2DC08 /* Reusable+IndentifierName.swift */; };
-		DF53CFB821BFE35D00C2DC08 /* Shadowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFB721BFE35D00C2DC08 /* Shadowable.swift */; };
 		DF53CFBB21BFE35D00C2DC08 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFBA21BFE35D00C2DC08 /* ColorPalette.swift */; };
-		DF53CFBD21BFE35D00C2DC08 /* TableView+Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFBC21BFE35D00C2DC08 /* TableView+Registration.swift */; };
 		DF53CFBF21BFE35D00C2DC08 /* FontBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFBE21BFE35D00C2DC08 /* FontBook.swift */; };
 		DF53CFC121BFE35D00C2DC08 /* EasyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFC021BFE35D00C2DC08 /* EasyViews.swift */; };
-		DF53CFC321BFE35D00C2DC08 /* RxSwift+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFC221BFE35D00C2DC08 /* RxSwift+Helpers.swift */; };
-		DF53CFC521BFE35D00C2DC08 /* Array+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFC421BFE35D00C2DC08 /* Array+Unwrap.swift */; };
 		DF53CFC721BFE35F00C2DC08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF53CFC621BFE35F00C2DC08 /* Assets.xcassets */; };
 		DF53CFCB21BFE35F00C2DC08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF53CFC921BFE35F00C2DC08 /* LaunchScreen.storyboard */; };
+		DF53CFD721BFE4C500C2DC08 /* Eye.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFD621BFE4C500C2DC08 /* Eye.swift */; };
+		DF53CFDD21BFE5A900C2DC08 /* BlinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFDC21BFE5A900C2DC08 /* BlinksService.swift */; };
+		DF53CFDF21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFDE21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift */; };
+		DF53CFE321BFEABD00C2DC08 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFE221BFEABD00C2DC08 /* RectangleView.swift */; };
+		DF53CFE521BFEB5200C2DC08 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53CFE421BFEB5200C2DC08 /* CameraView.swift */; };
+		DF53CFE721BFEC2200C2DC08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF53CFE621BFEC2200C2DC08 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24CBE47CC49F77570E3240A2 /* Pods_Blinks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blinks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E86153DEF778A7DA99D555 /* Pods-Blinks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blinks.debug.xcconfig"; path = "Target Support Files/Pods-Blinks/Pods-Blinks.debug.xcconfig"; sourceTree = "<group>"; };
+		D92B6EC6049B0A32663BA8BD /* Pods-Blinks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blinks.release.xcconfig"; path = "Target Support Files/Pods-Blinks/Pods-Blinks.release.xcconfig"; sourceTree = "<group>"; };
 		DF53CFA921BFE35D00C2DC08 /* Blinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF53CFAC21BFE35D00C2DC08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF53CFAE21BFE35D00C2DC08 /* BlinksRecognitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksRecognitionVC.swift; sourceTree = "<group>"; };
-		DF53CFB121BFE35D00C2DC08 /* DLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLog.swift; sourceTree = "<group>"; };
-		DF53CFB421BFE35D00C2DC08 /* Reusable+IndentifierName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable+IndentifierName.swift"; sourceTree = "<group>"; };
-		DF53CFB721BFE35D00C2DC08 /* Shadowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadowable.swift; sourceTree = "<group>"; };
 		DF53CFBA21BFE35D00C2DC08 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
-		DF53CFBC21BFE35D00C2DC08 /* TableView+Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Registration.swift"; sourceTree = "<group>"; };
 		DF53CFBE21BFE35D00C2DC08 /* FontBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontBook.swift; sourceTree = "<group>"; };
 		DF53CFC021BFE35D00C2DC08 /* EasyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyViews.swift; sourceTree = "<group>"; };
-		DF53CFC221BFE35D00C2DC08 /* RxSwift+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+Helpers.swift"; sourceTree = "<group>"; };
-		DF53CFC421BFE35D00C2DC08 /* Array+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Unwrap.swift"; sourceTree = "<group>"; };
 		DF53CFC621BFE35F00C2DC08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF53CFC821BFE35F00C2DC08 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		DF53CFCA21BFE35F00C2DC08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF53CFCC21BFE35F00C2DC08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF53CFD621BFE4C500C2DC08 /* Eye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eye.swift; sourceTree = "<group>"; };
+		DF53CFDC21BFE5A900C2DC08 /* BlinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksService.swift; sourceTree = "<group>"; };
+		DF53CFDE21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksRecognitionViewModel.swift; sourceTree = "<group>"; };
+		DF53CFE221BFEABD00C2DC08 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		DF53CFE421BFEB5200C2DC08 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		DF53CFE621BFEC2200C2DC08 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,17 +50,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8AAF29EECE2F18E5734D3B1 /* Pods_Blinks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1084CFB46E04DAE6EB7883FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24CBE47CC49F77570E3240A2 /* Pods_Blinks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E77041A5A3CE55B4DAACA18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0E86153DEF778A7DA99D555 /* Pods-Blinks.debug.xcconfig */,
+				D92B6EC6049B0A32663BA8BD /* Pods-Blinks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DF53CFA021BFE35D00C2DC08 = {
 			isa = PBXGroup;
 			children = (
 				DF53CFAB21BFE35D00C2DC08 /* Blinks */,
 				DF53CFAA21BFE35D00C2DC08 /* Products */,
+				9E77041A5A3CE55B4DAACA18 /* Pods */,
+				1084CFB46E04DAE6EB7883FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,45 +96,24 @@
 			isa = PBXGroup;
 			children = (
 				DF53CFAC21BFE35D00C2DC08 /* AppDelegate.swift */,
-				DF53CFAE21BFE35D00C2DC08 /* BlinksRecognitionVC.swift */,
 				DF53CFC621BFE35F00C2DC08 /* Assets.xcassets */,
 				DF53CFC821BFE35F00C2DC08 /* Podfile */,
 				DF53CFC921BFE35F00C2DC08 /* LaunchScreen.storyboard */,
 				DF53CFCC21BFE35F00C2DC08 /* Info.plist */,
-				DF53CFB021BFE35D00C2DC08 /* Helpers */,
+				DF53CFE621BFEC2200C2DC08 /* Localizable.strings */,
+				DF53CFD221BFE47A00C2DC08 /* UI */,
 				DF53CFB321BFE35D00C2DC08 /* Extensions */,
-				DF53CFB621BFE35D00C2DC08 /* Protocols */,
 				DF53CFB921BFE35D00C2DC08 /* Style */,
 			);
 			path = Blinks;
 			sourceTree = "<group>";
 		};
-		DF53CFB021BFE35D00C2DC08 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				DF53CFB121BFE35D00C2DC08 /* DLog.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		DF53CFB321BFE35D00C2DC08 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DF53CFB421BFE35D00C2DC08 /* Reusable+IndentifierName.swift */,
-				DF53CFBC21BFE35D00C2DC08 /* TableView+Registration.swift */,
 				DF53CFC021BFE35D00C2DC08 /* EasyViews.swift */,
-				DF53CFC221BFE35D00C2DC08 /* RxSwift+Helpers.swift */,
-				DF53CFC421BFE35D00C2DC08 /* Array+Unwrap.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		DF53CFB621BFE35D00C2DC08 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				DF53CFB721BFE35D00C2DC08 /* Shadowable.swift */,
-			);
-			name = Protocols;
 			sourceTree = "<group>";
 		};
 		DF53CFB921BFE35D00C2DC08 /* Style */ = {
@@ -122,6 +125,59 @@
 			name = Style;
 			sourceTree = "<group>";
 		};
+		DF53CFD221BFE47A00C2DC08 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DF53CFD821BFE53700C2DC08 /* BlinksRecognition */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		DF53CFD321BFE49500C2DC08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF53CFAE21BFE35D00C2DC08 /* BlinksRecognitionVC.swift */,
+				DF53CFE221BFEABD00C2DC08 /* RectangleView.swift */,
+				DF53CFE421BFEB5200C2DC08 /* CameraView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DF53CFD421BFE49F00C2DC08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF53CFD621BFE4C500C2DC08 /* Eye.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DF53CFD521BFE4AE00C2DC08 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF53CFDE21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		DF53CFD821BFE53700C2DC08 /* BlinksRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				DF53CFDB21BFE58D00C2DC08 /* API */,
+				DF53CFD321BFE49500C2DC08 /* Views */,
+				DF53CFD421BFE49F00C2DC08 /* Models */,
+				DF53CFD521BFE4AE00C2DC08 /* View Models */,
+			);
+			name = BlinksRecognition;
+			sourceTree = "<group>";
+		};
+		DF53CFDB21BFE58D00C2DC08 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DF53CFDC21BFE5A900C2DC08 /* BlinksService.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF53CFCF21BFE35F00C2DC08 /* Build configuration list for PBXNativeTarget "Blinks" */;
 			buildPhases = (
+				3A23DA6039A84E491F96B482 /* [CP] Check Pods Manifest.lock */,
 				DF53CFA521BFE35D00C2DC08 /* Sources */,
 				DF53CFA621BFE35D00C2DC08 /* Frameworks */,
 				DF53CFA721BFE35D00C2DC08 /* Resources */,
+				302F3FE0C32100FF19892370 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,28 +239,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF53CFC721BFE35F00C2DC08 /* Assets.xcassets in Resources */,
+				DF53CFE721BFEC2200C2DC08 /* Localizable.strings in Resources */,
 				DF53CFCB21BFE35F00C2DC08 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		302F3FE0C32100FF19892370 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Blinks/Pods-Blinks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Blinks/Pods-Blinks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A23DA6039A84E491F96B482 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Blinks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF53CFA521BFE35D00C2DC08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF53CFB221BFE35D00C2DC08 /* DLog.swift in Sources */,
-				DF53CFB521BFE35D00C2DC08 /* Reusable+IndentifierName.swift in Sources */,
 				DF53CFAD21BFE35D00C2DC08 /* AppDelegate.swift in Sources */,
+				DF53CFDD21BFE5A900C2DC08 /* BlinksService.swift in Sources */,
 				DF53CFBF21BFE35D00C2DC08 /* FontBook.swift in Sources */,
-				DF53CFB821BFE35D00C2DC08 /* Shadowable.swift in Sources */,
-				DF53CFC521BFE35D00C2DC08 /* Array+Unwrap.swift in Sources */,
+				DF53CFE521BFEB5200C2DC08 /* CameraView.swift in Sources */,
+				DF53CFDF21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift in Sources */,
 				DF53CFC121BFE35D00C2DC08 /* EasyViews.swift in Sources */,
+				DF53CFE321BFEABD00C2DC08 /* RectangleView.swift in Sources */,
+				DF53CFD721BFE4C500C2DC08 /* Eye.swift in Sources */,
 				DF53CFAF21BFE35D00C2DC08 /* BlinksRecognitionVC.swift in Sources */,
-				DF53CFBD21BFE35D00C2DC08 /* TableView+Registration.swift in Sources */,
 				DF53CFBB21BFE35D00C2DC08 /* ColorPalette.swift in Sources */,
-				DF53CFC321BFE35D00C2DC08 /* RxSwift+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +443,11 @@
 		};
 		DF53CFD021BFE35F00C2DC08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0E86153DEF778A7DA99D555 /* Pods-Blinks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5MTV78K7S9;
 				INFOPLIST_FILE = Blinks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -355,9 +462,11 @@
 		};
 		DF53CFD121BFE35F00C2DC08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D92B6EC6049B0A32663BA8BD /* Pods-Blinks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5MTV78K7S9;
 				INFOPLIST_FILE = Blinks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

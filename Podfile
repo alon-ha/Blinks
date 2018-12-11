@@ -1,11 +1,7 @@
 platform :ios, '11.0'
 inhibit_all_warnings!
 
-target 'CHANGE_TO_TARGET_NAME' do
+target 'Blinks' do
     use_frameworks!
-    pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'alamofire5'
     pod 'SnapKit'
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'Kingfisher'
 end
