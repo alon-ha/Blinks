@@ -19,10 +19,12 @@ class BlinksRecognitionVC: UIViewController {
     }
     
     fileprivate let viewModel: BlinksRecognitionViewModeling
+    fileprivate let contentUpdaterService: ContentUpdaterServicing
     
     fileprivate lazy var recognitionView: RecognitionView = {
         let recognitionView = RecognitionView()
-        recognitionView.delegate = self
+        recognitionView.delegate = contentUpdaterService
+        contentUpdaterService.set(device: recognitionView.device!)
         return recognitionView
     }()
     
@@ -47,8 +49,10 @@ class BlinksRecognitionVC: UIViewController {
         return btn
     }()
     
-    init(viewModel: BlinksRecognitionViewModeling = BlinksRecognitionViewModel()) {
+    init(viewModel: BlinksRecognitionViewModeling = BlinksRecognitionViewModel(),
+         contentUpdaterService: ContentUpdaterServicing = ContentUpdaterService()) {
         self.viewModel = viewModel
+        self.contentUpdaterService = contentUpdaterService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -59,12 +63,9 @@ class BlinksRecognitionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        configureViews()
         viewModel.inputs.set(delegate: self)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        recognitionView.session.pause()
+        contentUpdaterService.set(delegate: self)
     }
 }
 
@@ -85,25 +86,12 @@ fileprivate extension BlinksRecognitionVC {
         }
     }
     
+    func configureViews() {
+        title = viewModel.outputs.title
+    }
+    
     @objc func btnRecognizePressed() {
         viewModel.inputs.btnRecognizePressed()
-    }
-}
-
-extension BlinksRecognitionVC: ARSCNViewDelegate {
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
     }
 }
 
@@ -114,8 +102,7 @@ extension BlinksRecognitionVC: BlinksRecognitionDelegation {
     
     func startCameraTracking() {
         recognitionView.isHidden = false
-        let configuration = ARFaceTrackingConfiguration()
-        recognitionView.session.run(configuration)
+        recognitionView.start()
     }
     
     func btnRecognizeVisibility(shouldShow: Bool) {

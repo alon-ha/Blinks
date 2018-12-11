@@ -14,5 +14,13 @@ import ARKit
 // I chose to use ARSCNView to support also 3d if in the future we would like to do such
 
 class RecognitionView: ARSCNView {
-
+    private lazy var configuration: ARFaceTrackingConfiguration = {
+        let configuration = ARFaceTrackingConfiguration()
+        configuration.isLightEstimationEnabled = true
+        return configuration
+    }()
+    
+    func start() {
+        session.run(configuration)
+    }
 }
