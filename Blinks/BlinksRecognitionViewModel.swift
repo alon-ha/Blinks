@@ -33,9 +33,12 @@ class BlinksRecognitionViewModel: BlinksRecognitionViewModeling, BlinksRecogniti
     
     weak var delegate: BlinksRecognitionDelegation?
     let blinksService: BlinksServicing
+    let blinksColorProvider: BlinksColorProviding
     
-    init(blinksService: BlinksServicing = BlinksService()) {
+    init(blinksService: BlinksServicing = BlinksService(),
+         blinksColorProvider: BlinksColorProviding = BlinksColorProvider()) {
         self.blinksService = blinksService
+        self.blinksColorProvider = blinksColorProvider
     }
     
     lazy var title: String = {
@@ -72,21 +75,6 @@ class BlinksRecognitionViewModel: BlinksRecognitionViewModeling, BlinksRecogniti
 
 fileprivate extension BlinksRecognitionViewModel {
     func color(forBlinkNumber num: Int) -> UIColor {
-        switch num {
-        case 1:
-            return ColorPalette.red
-        case 2:
-            return ColorPalette.blue
-        case 3:
-            return ColorPalette.black
-        case 4:
-            return ColorPalette.yellow
-        case 5:
-            return ColorPalette.pink
-        case 6:
-            return ColorPalette.green
-        default:
-            return ColorPalette.basicGrey
-        }
+        return blinksColorProvider.color(forBlinkNumber: num)
     }
 }

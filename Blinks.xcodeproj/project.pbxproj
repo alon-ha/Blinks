@@ -23,6 +23,7 @@
 		DF53D01221C01D4700C2DC08 /* BlinksRecognitionDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01121C01D4700C2DC08 /* BlinksRecognitionDelegation.swift */; };
 		DF53D01421C0377D00C2DC08 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01321C0377D00C2DC08 /* RecognitionView.swift */; };
 		DF53D01621C0E1BF00C2DC08 /* EyeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01521C0E1BF00C2DC08 /* EyeNode.swift */; };
+		DF53D01821C1360F00C2DC08 /* BlinksColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01721C1360F00C2DC08 /* BlinksColorProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		DF53D01121C01D4700C2DC08 /* BlinksRecognitionDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksRecognitionDelegation.swift; sourceTree = "<group>"; };
 		DF53D01321C0377D00C2DC08 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
 		DF53D01521C0E1BF00C2DC08 /* EyeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeNode.swift; sourceTree = "<group>"; };
+		DF53D01721C1360F00C2DC08 /* BlinksColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksColorProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				DF53CFDC21BFE5A900C2DC08 /* BlinksService.swift */,
 				DF53D00F21C01CAE00C2DC08 /* ContentUpdaterService.swift */,
+				DF53D01721C1360F00C2DC08 /* BlinksColorProvider.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				DF53CFDD21BFE5A900C2DC08 /* BlinksService.swift in Sources */,
 				DF53CFBF21BFE35D00C2DC08 /* FontBook.swift in Sources */,
 				DF53D01021C01CAE00C2DC08 /* ContentUpdaterService.swift in Sources */,
+				DF53D01821C1360F00C2DC08 /* BlinksColorProvider.swift in Sources */,
 				DF53CFDF21BFE80700C2DC08 /* BlinksRecognitionViewModel.swift in Sources */,
 				DF53CFC121BFE35D00C2DC08 /* EasyViews.swift in Sources */,
 				DF53D01221C01D4700C2DC08 /* BlinksRecognitionDelegation.swift in Sources */,
