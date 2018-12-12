@@ -22,8 +22,6 @@ protocol ContentUpdaterServicing: class, ARSCNViewDelegate, ARSessionDelegate {
 
 class ContentUpdaterService: NSObject, ContentUpdaterServicing {
     fileprivate struct Metrics {
-        static let recHeight: CGFloat = 0.01
-        static let recWidth: CGFloat = 0.03
         static let recDefaultColor: UIColor = ColorPalette.basicGrey
         static let minimumValueToDetectBlink: Float = 0.6
         static let epsilon: Float = 0.01
@@ -32,24 +30,18 @@ class ContentUpdaterService: NSObject, ContentUpdaterServicing {
     weak var delegate: BlinksRecognitionDelegation?
     weak var viewModel: BlinksRecognitionViewModeling?
     
-    var isCurrentlyDetectingBlinkingInRightEye = false
-    var isCurrentlyDetectingBlinkingInLeftEye = false
+    // Array for each aye
+    var isCurrentlyDetectingBlinking: [Bool] = [false, false]
     
-    fileprivate lazy var rightEyeNode: SCNNode = {
-        let geometry = SCNPlane(width: Metrics.recWidth,
-                                height: Metrics.recHeight)
-        let material = geometry.firstMaterial!
-        material.diffuse.contents = Metrics.recDefaultColor
-        let node = SCNNode(geometry: geometry)
+    fileprivate lazy var rightEyeNode: EyeNode = {
+        let node = EyeNode()
+        node.change(color: Metrics.recDefaultColor)
         return node
     }()
     
-    fileprivate lazy var leftEyeNode: SCNNode = {
-        let geometry = SCNPlane(width: Metrics.recWidth,
-                                height: Metrics.recHeight)
-        let material = geometry.firstMaterial!
-        material.diffuse.contents = Metrics.recDefaultColor
-        let node = SCNNode(geometry: geometry)
+    fileprivate lazy var leftEyeNode: EyeNode = {
+        let node = EyeNode()
+        node.change(color: Metrics.recDefaultColor)
         return node
     }()
     
@@ -62,14 +54,14 @@ class ContentUpdaterService: NSObject, ContentUpdaterServicing {
     }
     
     func changeRectangle(forEye eye: Eye, color: UIColor) {
-        let node: SCNNode
+        let node: EyeNode
         switch eye {
         case .rightEye:
             node = rightEyeNode
         case .leftEye:
             node = leftEyeNode
         }
-        node.geometry?.firstMaterial?.diffuse.contents = color
+        node.change(color: color)
     }
 }
 
@@ -126,22 +118,21 @@ extension ContentUpdaterService {
 
 fileprivate extension ContentUpdaterService {
     func analyzeBlinks(blendShapes: [ARFaceAnchor.BlendShapeLocation : NSNumber]) {
-        if let eyeBlinkLeft = blendShapes[.eyeBlinkLeft] as? Float {
-            if !isCurrentlyDetectingBlinkingInLeftEye && eyeBlinkLeft > Metrics.minimumValueToDetectBlink {
-                isCurrentlyDetectingBlinkingInLeftEye = true
-                blink(eye: .leftEye)
-            } else if isCurrentlyDetectingBlinkingInLeftEye && eyeBlinkLeft < Metrics.epsilon {
-                isCurrentlyDetectingBlinkingInLeftEye = false
-            }
+        if let leftBlinkValue = blendShapes[.eyeBlinkLeft] as? Float {
+            analyze(blinkValue: leftBlinkValue, eye: .leftEye)
         }
         
-        if let rightBlinkLeft = blendShapes[.eyeBlinkRight] as? Float {
-            if !isCurrentlyDetectingBlinkingInRightEye && rightBlinkLeft > Metrics.minimumValueToDetectBlink {
-                isCurrentlyDetectingBlinkingInRightEye = true
-                blink(eye: .rightEye)
-            } else if isCurrentlyDetectingBlinkingInRightEye && rightBlinkLeft < Metrics.epsilon {
-                isCurrentlyDetectingBlinkingInRightEye = false
-            }
+        if let rightBlinkValue = blendShapes[.eyeBlinkRight] as? Float {
+            analyze(blinkValue: rightBlinkValue, eye: .rightEye)
+        }
+    }
+    
+    func analyze(blinkValue: Float, eye: Eye) {
+        if !isCurrentlyDetectingBlinking[eye.index] && blinkValue > Metrics.minimumValueToDetectBlink {
+            isCurrentlyDetectingBlinking[eye.index] = true
+            blink(eye: eye)
+        } else if isCurrentlyDetectingBlinking[eye.index] && blinkValue < Metrics.epsilon {
+            isCurrentlyDetectingBlinking[eye.index] = false
         }
     }
     

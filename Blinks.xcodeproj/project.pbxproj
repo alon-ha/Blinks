@@ -22,6 +22,7 @@
 		DF53D01021C01CAE00C2DC08 /* ContentUpdaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D00F21C01CAE00C2DC08 /* ContentUpdaterService.swift */; };
 		DF53D01221C01D4700C2DC08 /* BlinksRecognitionDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01121C01D4700C2DC08 /* BlinksRecognitionDelegation.swift */; };
 		DF53D01421C0377D00C2DC08 /* RecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01321C0377D00C2DC08 /* RecognitionView.swift */; };
+		DF53D01621C0E1BF00C2DC08 /* EyeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53D01521C0E1BF00C2DC08 /* EyeNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		DF53D00F21C01CAE00C2DC08 /* ContentUpdaterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUpdaterService.swift; sourceTree = "<group>"; };
 		DF53D01121C01D4700C2DC08 /* BlinksRecognitionDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinksRecognitionDelegation.swift; sourceTree = "<group>"; };
 		DF53D01321C0377D00C2DC08 /* RecognitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognitionView.swift; sourceTree = "<group>"; };
+		DF53D01521C0E1BF00C2DC08 /* EyeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				DF53CFAE21BFE35D00C2DC08 /* BlinksRecognitionVC.swift */,
 				DF53D01321C0377D00C2DC08 /* RecognitionView.swift */,
+				DF53D01521C0E1BF00C2DC08 /* EyeNode.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				DF53CFC121BFE35D00C2DC08 /* EasyViews.swift in Sources */,
 				DF53D01221C01D4700C2DC08 /* BlinksRecognitionDelegation.swift in Sources */,
 				DF53CFD721BFE4C500C2DC08 /* Eye.swift in Sources */,
+				DF53D01621C0E1BF00C2DC08 /* EyeNode.swift in Sources */,
 				DF53CFAF21BFE35D00C2DC08 /* BlinksRecognitionVC.swift in Sources */,
 				DF53CFBB21BFE35D00C2DC08 /* ColorPalette.swift in Sources */,
 			);
